@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Login</title>
+    <link rel="stylesheet" media="screen and (min-width: 0px)" href="mobile.css">
+    <link rel="stylesheet" media="screen and (min-width: 700px)" href="style.css">
+    <link rel="icon" 
+     type="image/png" 
+     href="V.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <script>
+
+    function checkForm(form)
+    {
+      if(form.firstname.value == "") {
+        alert("Error:First name is empty!");
+        form.firstname.focus();
+        return false;
+      }
+
+      if (form.lastname.value == "") {
+        alert("Error:Last name is empty!");
+        form.lastname.focus();
+        return false;
+      }
+
+      return true;
+    }
+
+  </script>
+</head>
+
+
+<body>
+
+<h1>Jean Augustine</h1>
+<h2> Volleyball Program</h2>
+
+    <div class="navigation">
+
+   <nav>
+       <a href="index.html">HOME</a>
+       <a href="login.html">LOGIN</a>
+   </nav>
+  </div>
+
+<div class="container">
+<div class="form">
+
+    <div class="subtitle">Login Here</div>
+
+
+<form action="mainmenu.html" method="post" onsubmit="return checkForm(this);"><br>
+<br>
+  <input type="text" name="firstname" placeholder="First Name"><br><br>
+
+  <input type="text" name="lastname" placeholder="Last Name"><br><br><br>
+  <input type="submit" class="loginbutton" value="Sign In">
+
+</form>
+
+</div>
+</div>
+
+</body>
+</html>
